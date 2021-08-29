@@ -23,5 +23,5 @@ export async function performanceTestHelper({
 
   const avg = resultsArr
     .reduce((accumulator, value) => accumulator + value, 0) / iterations
-  return avg;
+  return +avg.toFixed(4)
 }
