@@ -1,7 +1,5 @@
 ![alt text](./logo.png)
 
-# Performance test helper
-
 A tiny module to help test the performance of functions. 
 
 It uses `perf_hooks` (included in Node's standard lib) under the hood.
