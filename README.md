@@ -1,17 +1,21 @@
+![alt text](./logo.png)
+
 # Performance test helper
 
-A tiny module to help test the performance of functions. It uses `perf_hooks` under the hood.
+A tiny module to help test the performance of functions. 
+
+It uses `perf_hooks` (included in Node's standard lib) under the hood.
 
 ## Usage
 
 ```javascript
-const perfTestHelper = require('perf-test-helper')
+const { performanceTestHelper } = require('perf-test-helper')
 
 function functionToTest(numbers) {
   return numbers.reduce((acc, val) => acc + val, 0)
 }
 
-const averageTime = perfTestHelper({
+const averageTime = performanceTestHelper({
   iterations: 100,
   functionUnderTest: functionToTest,
   parameters: [
@@ -19,4 +23,4 @@ const averageTime = perfTestHelper({
   ]
 }) 
 // 0.115 (result is in milliseconds)
-
+```
